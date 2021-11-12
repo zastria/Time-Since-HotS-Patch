@@ -14,6 +14,10 @@ body {
     font-size: 72px;
 }
 
+.outro {
+    font-size: 48px;
+}
+
 .container {
     display: flex;
 	height: 66vh;
@@ -23,13 +27,18 @@ body {
 }
 
 .time {
-    font-size: 72px;
+    font-size: 48px;
 }
 
 .time img {
-    width: 125px;
-    height: 125px;
-    animation: rotate 0.75s linear infinite;
+    width: 60px;
+    height: 60px;
+    animation: rotate 2.5s linear infinite;
+    margin: 0 15px;
+}
+
+#number {
+    font-family: monospace;
 }
 
 @keyframes rotate {
