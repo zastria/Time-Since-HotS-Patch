@@ -1,5 +1,5 @@
 
-const lastPatchTime = 1632766260; // no milliseconds!!!
+const lastPatchTime = 1632766260; // not milliseconds!!!
 
 function updateTime() {
     let newTime = Math.floor(Date.now() / 1000);
@@ -23,3 +23,8 @@ function updateTime() {
 }
 
 updateTime();
+
+const patchDateMaps = {
+    date: "Today?", epoch: 0000,
+   
+}
