@@ -23,9 +23,9 @@ body {
     text-decoration: none;
 }
 
-.intro.fade-in-anim {animation-delay: 1.0s;}
-.time.fade-in-anim {animation-delay: 1.75s;}
-.outro.fade-in-anim {animation-delay: 2.5s;}
+.intro.fade-in-anim {animation-delay: 0.25s;}
+.time.fade-in-anim {animation-delay: 1.0s;}
+.outro.fade-in-anim {animation-delay: 1.75s;}
 
 .outro {
     font-size: 48px;
