@@ -192,7 +192,7 @@ function convertDateToEpoch(d)
 updateMainTime();
 
 
-printGapBetweenPatches();
+//printGapBetweenPatches();
 
 function printGapBetweenPatches()
 {
