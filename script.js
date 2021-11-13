@@ -57,7 +57,7 @@ const patchDateMaps = [
         {version: "2.36.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
         {version: "2.35.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
         {version: "2.35.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.34.?", date: "Tue Dec 01 2020 19:13:45 GMT"},
+        {version: "?????", date: "Tue Dec 01 2020 19:13:45 GMT"},
         {version: "2.34.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
         {version: "2.34.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
         {version: "2.33.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
@@ -155,9 +155,9 @@ const patchDateMaps = [
         {version: "6.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
         {version: "5.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
         {version: "2.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.?", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.?", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.?", date: "Tue Dec 01 2020 19:13:45 GMT"}
+        {version: "2.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
+        {version: "2.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
+        {version: "2.5", date: "Tue Dec 01 2020 19:13:45 GMT"}
     ]
 
 function updateMainTime() {
