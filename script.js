@@ -2,7 +2,8 @@
 const stopOnVersionValue = "2.49.1"; // I will continue the rest later ok!!!!
 
 // If you are inspecting this, don't call me out please!!! :(
-// Documents all patches, taken from https://heroespatchnotes.com/patch/summary.html, with a some specifications added (like almost exact date of release).
+// Documents all patches, taken from https://heroespatchnotes.com/patch/summary.html
+// with some specifications added (like almost exact date of release).
 const patchDateMaps = [
         {version: "2.54.4", date: "Mon Sep 27 2021 18:11:00 GMT"},
         {version: "2.54.3", date: "Fri Aug 20 2021 17:08:58 GMT"},
