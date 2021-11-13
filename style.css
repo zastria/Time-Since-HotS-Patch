@@ -26,6 +26,7 @@ body {
 .intro.fade-in-anim {animation-delay: 0.25s;}
 .time.fade-in-anim {animation-delay: 1.0s;}
 .outro.fade-in-anim {animation-delay: 1.75s;}
+.showlist.fade-in-anim {animation-delay: 2.5s;}
 
 .outro {
     font-size: 48px;
@@ -33,10 +34,10 @@ body {
 
 .container {
     display: flex;
-	height: 66vh;
 	flex-direction: column;
 	justify-content: center;
-    align-items: center;;
+    align-items: center;
+    padding-top: 100px;
 }
 
 .time {
@@ -52,6 +53,43 @@ body {
 
 #number {
     font-family: monospace;
+}
+
+.showlist {
+    margin-top: 50px;
+}
+
+.exitButton {
+    position: fixed;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #9155db;
+    border: 5px solid ghostwhite;
+    border-radius: 10px;
+    font-size: 48px;
+    font-weight: bold;
+    transition: 0.35s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #a261f1;
+}
+
+table {
+    width:66%;
+}
+
+th {
+    font-size: 48px;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 32px;
 }
 
 @keyframes rotate {

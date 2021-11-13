@@ -160,16 +160,19 @@ const patchDateMaps = [
         {version: "2.5", date: "Tue Dec 01 2020 19:13:45 GMT"}
     ]
 
+var updateTimer;
+
 function updateMainTime() {
     let numContainer = document.getElementById("number");
     numContainer.innerHTML = getTimeBetweenPatches(Date.now(), convertDateToEpoch(patchDateMaps[0].date));
-    setTimeout(() => {
+    updateTimer = setTimeout(() => {
         updateMainTime();    
     }, 1000);
 }
 
-function getTimeBetweenPatches(nextPatchTime, prevPatchTime)
-{
+updateMainTime();
+
+function getTimeBetweenPatches(nextPatchTime, prevPatchTime) {
     let seconds = Number(nextPatchTime - prevPatchTime)/1000;
 
     let d = Math.floor(seconds / (3600*24));
@@ -185,22 +188,102 @@ function getTimeBetweenPatches(nextPatchTime, prevPatchTime)
     return dDisplay + hDisplay + mDisplay + sDisplay;
 }
 
-function convertDateToEpoch(d)
-{
-    return new Date(d).getTime();
-}
+function showPatchDatesList() {
 
-updateMainTime();
+    clearTimeout(updateTimer);
 
+    let container = document.getElementById("container");
+    let table = document.createElement("table");
+    
+    // Remove everything
+    container.innerHTML = "";
 
-//printGapBetweenPatches();
+    // Create the header row
+    let tr = table.insertRow();
+    let th = document.createElement("th");
+    th.innerHTML = "Patch Version";
+    tr.appendChild(th);
+    th = document.createElement("th");
+    th.innerHTML = "Release Date";
+    tr.appendChild(th);
+    th = document.createElement("th");
+    th.innerHTML = "Time Taken";
+    tr.appendChild(th);
+    let thead = table.createTHead();
+    thead.appendChild(tr);
+    table.appendChild(thead);
 
-function printGapBetweenPatches()
-{
-    let date1, date2;
+    let cell;
 
     for(i = 0; i < patchDateMaps.length - 1; i++)
     {
+        if(patchDateMaps[i + 1].version == stopOnVersionValue) break; // incompleted list lol
+
+        tr = table.insertRow();
+
+        for(u = 0; u < 3; u++)
+        {
+            cell = tr.insertCell();
+            cell.innerHTML = getCellValue(i, u);
+        }
+        table.appendChild(tr);
+    }
+
+    container.appendChild(table);
+
+    document.getElementById("exit").style.display = "block";
+
+    for(i = 0; i < patchDateMaps.length - 1; i++) {
+        if(patchDateMaps[i + 1].version == stopOnVersionValue) break; // incompleted list lol
+        console.log(getTimeBetweenPatches(convertDateToEpoch(patchDateMaps[i].date), convertDateToEpoch(patchDateMaps[i + 1].date)));
+    }
+}
+
+function hidePatchDatesList()
+{
+    document.getElementById("container").innerHTML = '<h1 class="intro">It\'s been...</h1>' +
+    '<div class="time" id="time">' + 
+        '<h1><img src="./images/hots.png" /><a id="number">00:00:00:00</a><img src="./images/hots.png" /></h1>' + 
+    '</div>' +
+    '<h1 class="outro">since the last <i><u>Heroes of the Storm</u></i> patch.</h1>' +
+    '<button class="showlist" onclick="showPatchDatesList()">Show Patch List</button>';
+    document.getElementById("exit").style.display = "none";
+    updateMainTime();
+}
+
+function getCellValue(i, u)
+{
+    let patch = patchDateMaps[i];
+    
+    switch(u)
+    {
+        case 0:
+            return "v" + patch.version;
+        case 1:
+            return getSimplifiedDate(patch.date);
+        case 2:
+            let prevPatch = patchDateMaps[i+1];
+            return getTimeBetweenPatches(convertDateToEpoch(patch.date), convertDateToEpoch(prevPatch.date));
+    }
+}
+
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+// Returns -> MM/DD/YYYY
+function getSimplifiedDate(dString)
+{
+    let d = new Date(dString);
+    return monthNames[d.getMonth()] + "/" + d.getUTCDate() + "/" + d.getFullYear(); 
+}
+
+function convertDateToEpoch(d) {
+    return new Date(d).getTime();
+}
+
+function printGapBetweenPatches() {
+    let date1, date2;
+
+    for(i = 0; i < patchDateMaps.length - 1; i++) {
         date1 = new Date(patchDateMaps[i].date).getTime() / 1000;
         date2 = new Date(patchDateMaps[i + 1].date).getTime() / 1000;
         console.log("Time gap between patch " + patchDateMaps[i].version + " and patch " + patchDateMaps[i + 1].version +  " is " + getTimeBetweenPatches(date1, date2));

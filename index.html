@@ -9,12 +9,17 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="exit" style="display: none;">
+        <button class="exitButton" onclick="hidePatchDatesList()">X</button>
+    </div>
+    <div class="container" id="container">
         <h1 class="intro fade-in-anim">It's been...</h1>
         <div class="time fade-in-anim" id="time">
             <h1><img src="./images/hots.png" /><a id="number">00:00:00:00</a><img src="./images/hots.png" /></h1>
         </div>
         <h1 class="outro fade-in-anim">since the last <i><u>Heroes of the Storm</u></i> patch.</h1>
+        <button class="showlist fade-in-anim" onclick="showPatchDatesList()">Show Patch List</button>
     </div>
+    
     <script src="script.js"></script>
 </body>
