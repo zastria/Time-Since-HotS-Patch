@@ -1,5 +1,5 @@
 
-const stopOnVersionValue = "2.49.1"; // I will continue the rest later ok!!!!
+const stopOnVersionValue = "2.41.2"; // I will continue the rest later ok!!!!
 
 // If you are inspecting this, don't call me out please!!! :(
 // Documents all patches, taken from https://heroespatchnotes.com/patch/summary.html
