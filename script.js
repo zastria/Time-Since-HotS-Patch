@@ -4,6 +4,7 @@ const stopOnVersionValue = "2.49.1"; // I will continue the rest later ok!!!!
 // If you are inspecting this, don't call me out please!!! :(
 // Documents all patches, taken from https://heroespatchnotes.com/patch/summary.html
 // with some specifications added (like almost exact date of release).
+// First entry is the newest while last is the oldest.
 const patchDateMaps = [
         {version: "2.54.4", date: "Mon Sep 27 2021 18:11:00 GMT"},
         {version: "2.54.3", date: "Fri Aug 20 2021 17:08:58 GMT"},
@@ -20,29 +21,29 @@ const patchDateMaps = [
         {version: "2.51.1", date: "Wed Jul 15 2020 20:36:00 GMT"},
         {version: "2.51.0", date: "Tue Jun 23 2020 16:42:27 GMT"},
         {version: "2.50.2", date: "Wed Jun 03 2020 20:35:00 GMT"},
-        {version: "2.50.1", date: "Tue Apr 14 2020 16:40:00 GMT"},
-        {version: "2.50.0", date: "Wed Mar 11 2020 21:35:00 GMT"},
-        {version: "2.49.4", date: "Wed Feb 12 2020 21:44:44 GMT"},
-        {version: "2.49.3", date: "Wed Jan 22 2020 22:47:00 GMT"},
-        {version: "2.49.2", date: "Mon Dec 16 2019 17:52:00 GMT"},
+        {version: "2.50.1", date: "Wed May 06 2020 20:37:00 GMT"},
+        {version: "2.50.0", date: "Tue Apr 14 2020 16:40:00 GMT"},
+        {version: "2.49.4", date: "Wed Mar 11 2020 21:35:00 GMT"},
+        {version: "2.49.3", date: "Wed Feb 12 2020 21:44:44 GMT"},
+        {version: "2.49.2", date: "Wed Jan 22 2020 22:47:00 GMT"},
+        {version: "2.49.1", date: "Mon Dec 16 2019 17:52:00 GMT"},
+        {version: "2.49.0", date: "Tue Dec 03 2019 17:56:00 GMT"},
+        {version: "2.48.4", date: "Fri Nov 22 2019 21:40:00 GMT"},
+        {version: "2.48.2", date: "Tue Oct 15 2019 17:52:00 GMT"},
+        {version: "2.48.0", date: "Tue Sep 24 2019 14:59:00 GMT"},
+        {version: "2.47.2", date: "Wed Aug 28 2019 20:39:45 GMT"},
+        {version: "2.47.0", date: "Tue Aug 06 2019 15:06:00 GMT"},
+        {version: "2.46.1", date: "Wed Jul 10 2019 21:02:00 GMT"},
+        {version: "2.46.0", date: "Tue Jun 18 2019 16:14:00 GMT"},
+        {version: "2.45.1", date: "Wed May 22 2019 23:35:00 GMT"},
+        {version: "2.45.0", date: "Tue Apr 30 2019 15:59:00 GMT"},
+        {version: "2.44.1", date: "Wed Apr 17 2019 20:48:00 GMT"},
+        {version: "2.44.0", date: "Tue Mar 26 2019 16:16:18 GMT"},
+        {version: "2.43.2", date: "Wed Feb 27 2019 23:02:00 GMT"},
+        {version: "2.43.0", date: "Tue Feb 12 2019 17:00:00 GMT"},
+        {version: "2.42.1", date: "Wed Jan 23 2019 18:32:00 GMT"},
+        {version: "2.42.0", date: "Tue Jan 08 2019 16:30:00 GMT"},
 
-        {version: "2.49.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.49.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.48.4", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.48.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.48.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.47.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.47.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.46.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.46.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.45.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.45.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.44.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.44.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.43.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.43.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.42.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.42.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
         {version: "2.41.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
         {version: "2.41.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
         {version: "2.40.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
@@ -201,6 +202,7 @@ function showPatchDatesList() {
     // Create the header row
     let tr = table.insertRow();
     let th = document.createElement("th");
+
     th.innerHTML = "Patch Version";
     tr.appendChild(th);
     th = document.createElement("th");
@@ -208,7 +210,10 @@ function showPatchDatesList() {
     tr.appendChild(th);
     th = document.createElement("th");
     th.innerHTML = "Time Taken";
+
+    tr.classList.add("fade-in-anim-cell");
     tr.appendChild(th);
+
     let thead = table.createTHead();
     thead.appendChild(tr);
     table.appendChild(thead);
@@ -221,7 +226,7 @@ function showPatchDatesList() {
 
         tr = table.insertRow();
         tr.classList.add("fade-in-anim-cell");
-        tr.style.animationDelay = String(i * 0.025) + "s";
+        tr.style.animationDelay = String(0.025 + i * 0.025) + "s";
         
         for(u = 0; u < 3; u++)
         {
