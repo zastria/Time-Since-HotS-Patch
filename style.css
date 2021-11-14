@@ -23,6 +23,12 @@ body {
     text-decoration: none;
 }
 
+.fade-in-anim-cell {
+    animation: fadeIn 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
 .intro.fade-in-anim {animation-delay: 0.25s;}
 .time.fade-in-anim {animation-delay: 1.0s;}
 .outro.fade-in-anim {animation-delay: 1.75s;}
@@ -110,6 +116,16 @@ td {
     to {
         opacity: 1;
         transform: translateY(0em);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
 

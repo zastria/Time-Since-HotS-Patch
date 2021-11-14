@@ -220,7 +220,9 @@ function showPatchDatesList() {
         if(patchDateMaps[i + 1].version == stopOnVersionValue) break; // incompleted list lol
 
         tr = table.insertRow();
-
+        tr.classList.add("fade-in-anim-cell");
+        tr.style.animationDelay = String(i * 0.025) + "s";
+        
         for(u = 0; u < 3; u++)
         {
             cell = tr.insertCell();
@@ -264,7 +266,7 @@ function getCellValue(i, u)
 
 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-// Returns -> MM/DD/YYYY
+// Returns -> MM-DD-YYYY
 function getSimplifiedDate(dString)
 {
     let d = new Date(dString);
