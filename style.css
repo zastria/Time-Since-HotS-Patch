@@ -75,12 +75,17 @@ body {
 
 button {
     padding: 10px 20px;
+    margin: 5px;
     background-color: #9155db;
     border: 5px solid ghostwhite;
     border-radius: 10px;
     font-size: 48px;
     font-weight: bold;
     transition: 0.35s;
+}
+
+button a {
+    font-weight: 100;
 }
 
 button:hover {
@@ -90,6 +95,7 @@ button:hover {
 
 table {
     width:66%;
+    margin: 25px 0;
 }
 
 th {
@@ -100,6 +106,23 @@ td {
     text-align: center;
     vertical-align: middle;
     font-size: 32px;
+}
+
+tr {
+    margin: 0;
+}
+
+table, td, th {
+    border-collapse: collapse;
+}
+
+th {
+    background: #9269c3;
+    border-bottom: 3px solid white;
+}
+
+tr:nth-child(even) {
+    background: #9269c3;
 }
 
 @keyframes rotate {
