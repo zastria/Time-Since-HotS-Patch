@@ -232,13 +232,6 @@ function showPatchDatesList() {
     container.appendChild(table);
 
     document.getElementById("exit").style.display = "block";
-
-    /*
-    for(i = 0; i < patchDateMaps.length - 1; i++) {
-        if(patchDateMaps[i + 1].version == stopOnVersionValue) break;
-        console.log(getTimeBetweenPatches(convertDateToEpoch(patchDateMaps[i].date), convertDateToEpoch(patchDateMaps[i + 1].date)));
-    }
-    */
 }
 
 function hidePatchDatesList()
