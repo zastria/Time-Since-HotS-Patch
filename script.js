@@ -1,6 +1,3 @@
-
-const stopOnVersionValue = "24.2"; // I will continue the rest later ok!!!!
-
 // If you are inspecting this, don't call me out please!!! :(
 // Documents all patches, taken from https://heroespatchnotes.com/patch/summary.html
 // with some specifications added (like almost exact date of release).
@@ -90,7 +87,7 @@ const patchDateMaps = [
         {version: "2.27.0", date: "Tue Aug 08 2017 14:45:00 GMT"},
         {version: "2.26.4", date: "Wed Jul 26 2017 16:30:00 GMT"},
         {version: "2.26.3", date: "Tue Jul 11 2017 18:40:00 GMT"},
-        {version: "2.26.1 / 2.26.2", date: "Wed Jun 28 2017 16:30:00 GMT"},
+        {version: "2.26.1-2", date: "Wed Jun 28 2017 16:30:00 GMT"},
         {version: "2.26.0", date: "Tue Jun 13 2017 16:00:00 GMT"},
         {version: "2.25.5", date: "Wed May 31 2017 16:39:49 GMT"},
         {version: "2.25.4", date: "Tue May 16 2017 16:30:00 GMT"},
@@ -100,68 +97,67 @@ const patchDateMaps = [
         {version: "2.25.0", date: "Tue Apr 25 2017 18:50:00 GMT"},
         {version: "24.6", date: "Thu Apr 20 2017 16:30:00 GMT"},
         {version: "24.4", date: "Tue Apr 04 2017 16:40:00 GMT"},
-
-        {version: "24.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "24.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "23.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "23.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "23.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "23.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "22.6", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "22.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "22.4", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "22.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "22.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "22.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "21.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "21.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "21.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "20.6", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "20.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "20.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "19.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "19.4", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "19.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "19.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "18.6", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "18.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "18.4", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "18.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "18.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "17.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "17.4", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "17.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "17.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "17.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "16.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "16.4", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "16.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "16.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "16.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "16.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "15.7", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "15.6", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "15.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "15.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "15.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "15.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "14.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "14.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "13.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "13.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "12.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "11.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "11.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "10.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "9.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "8.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "7.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "6.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "5.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.5", date: "Tue Dec 01 2020 19:13:45 GMT"}
+        {version: "24.2", date: "Tue Mar 28 2017 16:43:00 GMT"},
+        {version: "24.0", date: "Tue Mar 14 2017 16:00:00 GMT"},
+        {version: "23.5", date: "Mon Feb 27 2017 18:00:00 GMT"},
+        {version: "23.3", date: "Tue Feb 14 2017 18:00:00 GMT"},
+        {version: "23.1", date: "Fri Jan 27 2017 17:30:00 GMT"},
+        {version: "23.0", date: "Tue Jan 24 2017 16:00:00 GMT"},
+        {version: "22.6", date: "Fri Jan 06 2017 17:30:00 GMT"},
+        {version: "22.5", date: "Wed Jan 04 2017 15:45:00 GMT"},
+        {version: "22.4", date: "Tue Dec 20 2016 17:00:00 GMT"},
+        {version: "22.3", date: "Wed Dec 14 2016 16:00:00 GMT"},
+        {version: "22.2", date: "Tue Dec 06 2016 17:00:00 GMT"},
+        {version: "22.0", date: "Tue Nov 15 2016 16:30:00 GMT"},
+        {version: "21.2", date: "Thu Nov 10 2016 00:42:00 GMT"},
+        {version: "21.1", date: "Tue Oct 25 2016 16:36:00 GMT"},
+        {version: "21.0", date: "Tue Oct 18 2016 15:00:00 GMT"},
+        {version: "20.6", date: "Wed Oct 12 2016 17:00:00 GMT"},
+        {version: "20.2", date: "Thu Sep 29 2016 16:42:00 GMT"},
+        {version: "20.0", date: "Tue Sep 13 2016 13:00:00 GMT"},
+        {version: "19.5", date: "Mon Aug 22 2016 22:50:00 GMT"},
+        {version: "19.4", date: "Tue Aug 09 2016 16:45:00 GMT"},
+        {version: "19.3", date: "Wed Jul 27 2016 17:15:00 GMT"},
+        {version: "19.0", date: "Tue Jul 12 2016 15:05:00 GMT"},
+        {version: "18.6", date: "Wed Jun 29 2016 16:35:00 GMT"},
+        {version: "18.5", date: "Tue Jun 21 2016 16:42:00 GMT"},
+        {version: "18.4", date: "Tue Jun 14 2016 15:00:00 GMT"},
+        {version: "18.3", date: "Thu Jun 02 2016 17:52:00 GMT"},
+        {version: "18.0", date: "Tue May 17 2016 15:00:00 GMT"},
+        {version: "17.5", date: "Wed May 04 2016 17:00:00 GMT"},
+        {version: "17.4", date: "Wed Apr 27 2016 16:30:00 GMT"},
+        {version: "17.2", date: "Tue Apr 19 2016 17:30:00 GMT"},
+        {version: "17.1", date: "Tue Apr 12 2016 18:00:00 GMT"},
+        {version: "17.0", date: "Tue Mar 29 2016 15:45:00 GMT"},
+        {version: "16.5", date: "Wed Mar 16 2016 16:45:00 GMT"},
+        {version: "16.4", date: "Wed Mar 09 2016 17:45:00 GMT"},
+        {version: "16.3", date: "Tue Mar 01 2016 18:00:00 GMT"},
+        {version: "16.2", date: "Wed Feb 17 2016 17:35:00 GMT"},
+        {version: "16.1", date: "Wed Feb 10 2016 17:30:00 GMT"},
+        {version: "16.0", date: "Tue Feb 02 2016 16:15:00 GMT"},
+        {version: "15.7", date: "Wed Jan 27 2016 19:00:00 GMT"},
+        {version: "15.6", date: "Wed Jan 20 2016 21:00:00 GMT"},
+        {version: "15.5", date: "Tue Jan 12 2016 19:15:00 GMT"},
+        {version: "15.3", date: "Tue Dec 15 2015 15:15:00 GMT"},
+        {version: "15.2", date: "Tue Dec 08 2015 19:00:00 GMT"},
+        {version: "15.0", date: "Tue Nov 17 2015 16:15:00 GMT"},
+        {version: "14.2", date: "Tue Oct 20 2015 18:19:00 GMT"},
+        {version: "14.0", date: "Tue Oct 06 2015 13:00:00 GMT"},
+        {version: "13.3", date: "Tue Sep 08 2015 21:00:00 GMT"},
+        {version: "13.0", date: "Tue Aug 18 2015 15:00:00 GMT"},
+        {version: "12.0", date: "Tue Jun 30 2015 22:45:00 GMT"},
+        {version: "11.1", date: "Tue Jun 02 2015 21:30:00 GMT"},
+        {version: "11.0", date: "Tue May 12 2015 13:15:00 GMT"},
+        {version: "10.0", date: "Tue Mar 24 2015 13:30:00 GMT"},
+        {version: "9.0", date: "Tue Feb 10 2015 15:30:00 GMT"},
+        {version: "8.0", date: "Tue Jan 13 2015 16:00:00 GMT"},
+        {version: "7.1", date: "Tue Dec 02 2014 17:00:00 GMT"},
+        {version: "6.5", date: "Tue Oct 07 2014 17:00:00 GMT"},
+        {version: "5.0", date: "Wed Sep 10 2014 19:00:00 GMT"},
+        {version: "2.5", date: "Wed Jul 23 2014 19:00:00 GMT"},
+        {version: "2.5", date: "Wed Jun 25 2014 18:00:00 GMT"},
+        {version: "2.5", date: "Thu May 22 2014 17:00:00 GMT"},
+        {version: "2.5", date: "Tue Apr 15 2014 22:00:00 GMT"}
     ]
 
 var updateTimer;
@@ -223,13 +219,11 @@ function showPatchDatesList() {
 
     let cell;
 
-    for(i = 0; i < patchDateMaps.length - 1; i++)
+    for(i = 0; i < patchDateMaps.length; i++)
     {
-        if(patchDateMaps[i + 1].version == stopOnVersionValue) break; // incompleted list lol
-
         tr = table.insertRow();
         tr.classList.add("fade-in-anim-cell");
-        tr.style.animationDelay = String(0.02 + i * 0.02) + "s";
+        tr.style.animationDelay = String(0.01 + i * 0.01) + "s";
         
         for(u = 0; u < 3; u++)
         {
@@ -251,7 +245,14 @@ function hidePatchDatesList()
         '<h1><img src="./images/hots.png" /><a id="number">00:00:00:00</a><img src="./images/hots.png" /></h1>' + 
     '</div>' +
     '<h1 class="outro">since the last <i><u>Heroes of the Storm</u></i> patch.</h1>' +
-    '<button class="showlist" onclick="showPatchDatesList()">Show Patch List</button>';
+    '<div>' +
+        '<button class="showlist" onclick="showPatchDatesList()">Show Patch List</button>' + 
+        '<button class="showlist">' + 
+            '<a href="https://github.com/SamiSha99/Time-Since-HotS-Patch/" target="_blank">' +
+                '<i class="fab fa-github"></i>' + 
+            '</a>' + 
+        '</button>' + 
+    '</div>';
     document.getElementById("exit").style.display = "none";
     updateMainTime();
 }
@@ -267,6 +268,9 @@ function getCellValue(i, u)
         case 1:
             return getSimplifiedDate(patch.date);
         case 2:
+
+            if(i + 1 == patchDateMaps.length) return "";
+
             let prevPatch = patchDateMaps[i+1];
             return getTimeBetweenPatches(convertDateToEpoch(patch.date), convertDateToEpoch(prevPatch.date));
     }
