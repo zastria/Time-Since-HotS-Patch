@@ -56,7 +56,10 @@ const patchDateMaps = [
         {version: "2.36.0", date: "Tue Aug 07 2018 17:00:00 GMT"},
         {version: "2.35.1", date: "Wed Jul 25 2018 16:00:00 GMT"},
         {version: "2.35.0", date: "Tue Jul 10 2018 14:30:00 GMT"},
+        
+        // I have no idea, I've looked everywhere and it doesn't have a version code number, oh well..
         {version: "Unknown", date: "Tue Jul 03 2018 17:30:00 GMT"},
+        
         {version: "2.34.3", date: "Wed Jun 27 2018 16:50:00 GMT"},
         {version: "2.34.0", date: "Tue Jun 12 2018 15:00:00 GMT"},
         {version: "2.33.1", date: "Wed Jun 06 2018 16:30:00 GMT"},
