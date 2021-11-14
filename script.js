@@ -1,5 +1,5 @@
 
-const stopOnVersionValue = "2.41.2"; // I will continue the rest later ok!!!!
+const stopOnVersionValue = "24.2"; // I will continue the rest later ok!!!!
 
 // If you are inspecting this, don't call me out please!!! :(
 // Documents all patches, taken from https://heroespatchnotes.com/patch/summary.html
@@ -43,61 +43,64 @@ const patchDateMaps = [
         {version: "2.43.0", date: "Tue Feb 12 2019 17:00:00 GMT"},
         {version: "2.42.1", date: "Wed Jan 23 2019 18:32:00 GMT"},
         {version: "2.42.0", date: "Tue Jan 08 2019 16:30:00 GMT"},
+        {version: "2.41.2", date: "Wed Dec 19 2018 18:00:00 GMT"},
 
-        {version: "2.41.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.41.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.40.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.40.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.39.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.39.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.38.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.38.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.37.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.37.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.36.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.36.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.35.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.35.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "?????", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.34.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.34.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.33.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.33.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.32.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.32.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.31.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.31.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.30.6", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.30.4", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.30.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.30.1", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.30.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.29.9", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.29.8", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.29.7", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.29.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.29.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.29.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.29.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.28.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.28.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.28.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.28.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.27.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.27.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.27.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.27.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.26.4", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.26.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.26.1 / 2.26.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.26.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.25.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.25.4", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.25.3", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.25.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "2.25.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "24.6", date: "Tue Dec 01 2020 19:13:45 GMT"},
-        {version: "24.4", date: "Tue Dec 01 2020 19:13:45 GMT"},
+        // Jeez, the difference from here and above speaks to itself...
+        {version: "2.41.0", date: "Tue Dec 11 2018 16:23:00 GMT"},
+        {version: "2.40.1", date: "Wed Nov 28 2018 18:00:00 GMT"},
+        {version: "2.40.0", date: "Tue Nov 13 2018 16:39:00 GMT"},
+        {version: "2.39.2", date: "Wed Oct 31 2018 17:00:00 GMT"},
+        {version: "2.39.0", date: "Tue Oct 16 2018 23:00:00 GMT"},
+        {version: "2.38.2", date: "Mon Oct 08 2018 17:29:00 GMT"},
+        {version: "2.38.0", date: "Tue Sep 25 2018 16:10:00 GMT"},
+        {version: "2.37.1", date: "Mon Sep 17 2018 17:00:00 GMT"},
+        {version: "2.37.0", date: "Tue Sep 04 2018 17:00:00 GMT"},
+        {version: "2.36.2", date: "Wed Aug 22 2018 17:00:00 GMT"},
+        {version: "2.36.0", date: "Tue Aug 07 2018 17:00:00 GMT"},
+        {version: "2.35.1", date: "Wed Jul 25 2018 16:00:00 GMT"},
+        {version: "2.35.0", date: "Tue Jul 10 2018 14:30:00 GMT"},
+        {version: "Unknown", date: "Tue Jul 03 2018 17:30:00 GMT"},
+        {version: "2.34.3", date: "Wed Jun 27 2018 16:50:00 GMT"},
+        {version: "2.34.0", date: "Tue Jun 12 2018 15:00:00 GMT"},
+        {version: "2.33.1", date: "Wed Jun 06 2018 16:30:00 GMT"},
+        {version: "2.33.0", date: "Tue May 22 2018 15:30:00 GMT"},
+        {version: "2.32.2", date: "Wed May 09 2018 16:30:00 GMT"},
+        {version: "2.32.0", date: "Tue Apr 24 2018 14:40:00 GMT"},
+        {version: "2.31.2", date: "Wed Apr 11 2018 17:00:00 GMT"},
+        {version: "2.31.0", date: "Tue Mar 27 2018 14:35:00 GMT"},
+        {version: "2.30.6", date: "Wed Mar 21 2018 16:36:00 GMT"},
+        {version: "2.30.4", date: "Tue Mar 06 2018 15:30:00 GMT"},
+        {version: "2.30.3", date: "Wed Feb 21 2018 17:30:00 GMT"},
+        {version: "2.30.1", date: "Fri Feb 09 2018 17:49:00 GMT"},
+        {version: "2.30.0", date: "Tue Feb 06 2018 16:00:00 GMT"},
+        {version: "2.29.9", date: "Wed Jan 24 2018 17:55:00 GMT"},
+        {version: "2.29.8", date: "Tue Jan 16 2018 18:00:00 GMT"},
+        {version: "2.29.7", date: "Tue Jan 09 2018 16:30:00 GMT"},
+        {version: "2.29.5", date: "Wed Dec 20 2017 20:30:00 GMT"},
+        {version: "2.29.3", date: "Tue Dec 12 2017 16:00:00 GMT"},
+        {version: "2.29.2", date: "Wed Nov 29 2017 17:40:00 GMT"},
+        {version: "2.29.0", date: "Tue Nov 14 2017 15:30:00 GMT"},
+        {version: "2.28.5", date: "Wed Nov 01 2017 16:35:00 GMT"},
+        {version: "2.28.3", date: "Tue Oct 17 2017 16:00:00 GMT"},
+        {version: "2.28.2", date: "Wed Oct 11 2017 16:35:00 GMT"},
+        {version: "2.28.0", date: "Tue Sep 26 2017 16:23:00 GMT"},
+        {version: "2.27.5", date: "Mon Sep 18 2017 16:55:00 GMT"},
+        {version: "2.27.3", date: "Tue Sep 05 2017 15:00:00 GMT"},
+        {version: "2.27.2", date: "Wed Aug 23 2017 16:50:00 GMT"},
+        {version: "2.27.0", date: "Tue Aug 08 2017 14:45:00 GMT"},
+        {version: "2.26.4", date: "Wed Jul 26 2017 16:30:00 GMT"},
+        {version: "2.26.3", date: "Tue Jul 11 2017 18:40:00 GMT"},
+        {version: "2.26.1 / 2.26.2", date: "Wed Jun 28 2017 16:30:00 GMT"},
+        {version: "2.26.0", date: "Tue Jun 13 2017 16:00:00 GMT"},
+        {version: "2.25.5", date: "Wed May 31 2017 16:39:49 GMT"},
+        {version: "2.25.4", date: "Tue May 16 2017 16:30:00 GMT"},
+        {version: "2.25.3", date: "Wed May 10 2017 16:31:00 GMT"},
+
+        // 2.0 launch
+        {version: "2.25.0", date: "Tue Apr 25 2017 18:50:00 GMT"},
+        {version: "24.6", date: "Thu Apr 20 2017 16:30:00 GMT"},
+        {version: "24.4", date: "Tue Apr 04 2017 16:40:00 GMT"},
+
         {version: "24.2", date: "Tue Dec 01 2020 19:13:45 GMT"},
         {version: "24.0", date: "Tue Dec 01 2020 19:13:45 GMT"},
         {version: "23.5", date: "Tue Dec 01 2020 19:13:45 GMT"},
@@ -226,7 +229,7 @@ function showPatchDatesList() {
 
         tr = table.insertRow();
         tr.classList.add("fade-in-anim-cell");
-        tr.style.animationDelay = String(0.025 + i * 0.025) + "s";
+        tr.style.animationDelay = String(0.02 + i * 0.02) + "s";
         
         for(u = 0; u < 3; u++)
         {
@@ -260,7 +263,7 @@ function getCellValue(i, u)
     switch(u)
     {
         case 0:
-            return "v" + patch.version;
+            return patch.version == "Unknown" ? patch.version : "v" + patch.version;
         case 1:
             return getSimplifiedDate(patch.date);
         case 2:
