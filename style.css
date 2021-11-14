@@ -69,6 +69,10 @@ body {
     position: fixed;
 }
 
+#exit {
+    z-index: 3;
+}
+
 button {
     padding: 10px 20px;
     background-color: #9155db;
