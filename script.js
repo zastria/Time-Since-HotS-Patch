@@ -268,7 +268,7 @@ const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep
 function getSimplifiedDate(dString)
 {
     let d = new Date(dString);
-    return monthNames[d.getMonth()] + "-" + d.getUTCDate() + "-" + d.getFullYear(); 
+    return monthNames[d.getUTCMonth()] + "-" + d.getUTCDate() + "-" + d.getUTCFullYear(); 
 }
 
 function convertDateToEpoch(d) {
