@@ -173,7 +173,7 @@ function updateMainTime() {
 updateMainTime();
 
 function getTimeBetweenPatches(nextPatchTime, prevPatchTime) {
-    let seconds = Number(nextPatchTime - prevPatchTime)/1000;
+    let seconds = Number(nextPatchTime - prevPatchTime) / 1000;
 
     let d = Math.floor(seconds / (3600*24));
     let h = Math.floor(seconds % (3600*24) / 3600);
@@ -233,10 +233,12 @@ function showPatchDatesList() {
 
     document.getElementById("exit").style.display = "block";
 
+    /*
     for(i = 0; i < patchDateMaps.length - 1; i++) {
-        if(patchDateMaps[i + 1].version == stopOnVersionValue) break; // incompleted list lol
+        if(patchDateMaps[i + 1].version == stopOnVersionValue) break;
         console.log(getTimeBetweenPatches(convertDateToEpoch(patchDateMaps[i].date), convertDateToEpoch(patchDateMaps[i + 1].date)));
     }
+    */
 }
 
 function hidePatchDatesList()
@@ -273,7 +275,7 @@ const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep
 function getSimplifiedDate(dString)
 {
     let d = new Date(dString);
-    return monthNames[d.getMonth()] + "/" + d.getUTCDate() + "/" + d.getFullYear(); 
+    return monthNames[d.getMonth()] + "-" + d.getUTCDate() + "-" + d.getFullYear(); 
 }
 
 function convertDateToEpoch(d) {
