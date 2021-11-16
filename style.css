@@ -120,9 +120,7 @@ table, td, th {
 }
 
 th {
-    background-image: url('https://i.imgur.com/yJSbaTL.png');
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-color: #23A07E
     border-bottom: 3px solid white;
 }
 
