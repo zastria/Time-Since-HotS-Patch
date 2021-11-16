@@ -123,7 +123,10 @@ th {
 }
 
 tr:nth-child(even) {
-    background-image: url('https://i.imgur.com/wNrCa1P.png');
+    background-image: url('https://i.imgur.com/WlfW25C.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+	
 }
 
 @keyframes rotate {
