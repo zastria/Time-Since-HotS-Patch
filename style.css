@@ -7,7 +7,7 @@
 
 body {
     background-color: #23A07E;
-    background-image: url('https://t4.ftcdn.net/jpg/02/15/94/83/360_F_215948377_kgIhNUy4X0iYsyUfYd9KKIViSPOxclbC.jpg');
+    background-image: url('https://i.imgur.com/wNrCa1P.png');
 }
 
 .intro {
@@ -118,12 +118,12 @@ table, td, th {
 }
 
 th {
-    background-image: url('https://t4.ftcdn.net/jpg/02/15/94/83/360_F_215948377_kgIhNUy4X0iYsyUfYd9KKIViSPOxclbC.jpg');
+    background-image: url('https://i.imgur.com/wNrCa1P.png');
     border-bottom: 3px solid white;
 }
 
 tr:nth-child(even) {
-    background-image: url('https://t4.ftcdn.net/jpg/02/15/94/83/360_F_215948377_kgIhNUy4X0iYsyUfYd9KKIViSPOxclbC.jpg');
+    background-image: url('https://i.imgur.com/wNrCa1P.png');
 }
 
 @keyframes rotate {
