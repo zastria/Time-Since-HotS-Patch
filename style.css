@@ -76,7 +76,7 @@ body {
 button {
     padding: 10px 20px;
     margin: 5px;
-    background-color: #9155db;
+    background-color: #184349;
     border: 5px solid ghostwhite;
     border-radius: 10px;
     font-size: 48px;
@@ -117,12 +117,12 @@ table, td, th {
 }
 
 th {
-    background: #9269c3;
+    background: #184349;
     border-bottom: 3px solid white;
 }
 
 tr:nth-child(even) {
-    background: #9269c3;
+    background: #184349;
 }
 
 @keyframes rotate {
