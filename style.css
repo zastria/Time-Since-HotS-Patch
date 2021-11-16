@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #184349;
+   background-image: "./images/nortowindo.png";
 }
 
 .intro {
@@ -117,7 +117,7 @@ table, td, th {
 }
 
 th {
-    background: #184349;
+    background-image: "./images/nortowindo.png";
     border-bottom: 3px solid white;
 }
 
