@@ -3,7 +3,7 @@
 // with some specifications added (like almost exact date of release).
 // First entry is the newest while last is the oldest.
 const patchDateMaps = [
-        {version: "15", date: "Thy Jun 03 2021 16:03:00 GMT"},
+        {version: "15", date: "Thu Jun 03 2021 16:03:00 GMT"},
         {version: "14", date: "Sat Nov 28 2021 20:38:00 GMT"}
     ]
 
