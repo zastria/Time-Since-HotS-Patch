@@ -88,15 +88,11 @@ function hidePatchDatesList()
 {
     document.getElementById("container").innerHTML = '<h1 class="intro">It\'s been...</h1>' +
     '<div class="time" id="time">' + 
-        '<h1><img src="./images/hots.png" /><a id="number">00:00:00:00</a><img src="./images/hots.png" /></h1>' + 
+        '<h1><a id="number">00:00:00:00</a></h1>' + 
     '</div>' +
-    '<h1 class="outro">since the last <i><u>Heroes of the Storm</u></i> patch.</h1>' +
+    '<h1 class="outro">since the last <i><u>major</u></i> NORTHWIND update.</h1>' +
     '<div>' +
-        '<button class="showlist" onclick="showPatchDatesList()">Show Patch List</button>' + 
-        '<button class="showlist">' + 
-            '<a href="https://github.com/SamiSha99/Time-Since-HotS-Patch/" target="_blank">' +
-                '<i class="fab fa-github"></i>' + 
-            '</a>' + 
+        '<button class="showlist" onclick="showPatchDatesList()">Show Update Log</button>' + 
         '</button>' + 
     '</div>';
     document.getElementById("exit").style.display = "none";
