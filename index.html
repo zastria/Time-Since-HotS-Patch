@@ -8,21 +8,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
 </head>
+<head>
+    <style>
+        body{
+              background-image: url('https://t4.ftcdn.net/jpg/02/15/94/83/360_F_215948377_kgIhNUy4X0iYsyUfYd9KKIViSPOxclbC.jpg');
+        <div id="exit" style="display: none;">
+            <button class="exitButton" onclick="hidePatchDatesList()">Return</button>
+        </div>
+        <div class="container" id="container">
+            <h1 class="intro fade-in-anim">It's been...</h1>
+            <div class="time fade-in-anim" id="time">
+                <h1><a id="number">00:00:00:00</a></h1>
+            </div>
+            <h1 class="outro fade-in-anim">since the last <i><u>major</u></i> NORTHWIND update.</h1>
+            <div>
+                <button class="showlist fade-in-anim" onclick="showPatchDatesList()">Show Update Log</button>
+            </div>
+        </div>
 
-<body>
-    <div id="exit" style="display: none;">
-        <button class="exitButton" onclick="hidePatchDatesList()">Return</button>
-    </div>
-    <div class="container" id="container">
-        <h1 class="intro fade-in-anim">It's been...</h1>
-        <div class="time fade-in-anim" id="time">
-            <h1><a id="number">00:00:00:00</a></h1>
-        </div>
-        <h1 class="outro fade-in-anim">since the last <i><u>major</u></i> NORTHWIND update.</h1>
-        <div>
-            <button class="showlist fade-in-anim" onclick="showPatchDatesList()">Show Update Log</button>
-        </div>
-    </div>
-    
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    )
