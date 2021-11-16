@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #999999;
+    background-color: #23A07E;
     background-image: url('https://t4.ftcdn.net/jpg/02/15/94/83/360_F_215948377_kgIhNUy4X0iYsyUfYd9KKIViSPOxclbC.jpg');
 }
 
@@ -123,7 +123,7 @@ th {
 }
 
 tr:nth-child(even) {
-    background: #184349;
+    background-image: url('https://t4.ftcdn.net/jpg/02/15/94/83/360_F_215948377_kgIhNUy4X0iYsyUfYd9KKIViSPOxclbC.jpg');
 }
 
 @keyframes rotate {
