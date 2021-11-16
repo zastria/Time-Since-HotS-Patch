@@ -4,7 +4,7 @@
 // First entry is the newest while last is the oldest.
 const patchDateMaps = [
         {version: "15", date: "Thu Jun 03 2021 04:03:00 GMT"},
-        {version: "14", date: "Sat Nov 28 2020 04:03:00 GMT"}
+        {version: "14", date: "Sat Nov 28 2020 06:54:00 GMT"}
     ]
 
 var updateTimer;
