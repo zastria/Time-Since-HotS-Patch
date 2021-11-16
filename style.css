@@ -8,6 +8,8 @@
 body {
     background-color: #23A07E;
     background-image: url('https://i.imgur.com/wNrCa1P.png');
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 
 .intro {
@@ -119,6 +121,8 @@ table, td, th {
 
 th {
     background-image: url('https://i.imgur.com/wNrCa1P.png');
+    background-repeat:no-repeat;
+    background-size:cover;
     border-bottom: 3px solid white;
 }
 
